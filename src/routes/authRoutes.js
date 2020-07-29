@@ -17,7 +17,7 @@ router.post('/signin',(req,res)=>{
     if(emaili ===  email && password === passwordi)
         return res.status(200).send({message:"Logged In Successfully"});
 
-    return res.status(501).send({message:"Invalid Credentials"});
+    return res.status(401).send({message:"Invalid Credentials"});
 });
 
 module.exports= router;
